@@ -19,21 +19,26 @@ class HomePage extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Expanded(
-                  child: Image.asset(
-                    'images/dice1.png',
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Left Dice Tapped');
+                    },
+                    child: Image.asset(
+                      'images/dice1.png',
+                    ),
                   ),
                   flex: 2,
                 ),
                 Expanded(
-                  child: Image.asset(
-                    'images/dice3.png',
+                  child: GestureDetector(
+                    onTap: () {
+                      print('Right Dice Tapped');
+                    },
+                    child: Image.asset(
+                      'images/dice3.png',
+                    ),
                   ),
-                  flex: 3,
-                ),
-                Expanded(
-                  child: Image.asset(
-                    'images/dice5.png',
-                  ),
+                  flex: 2,
                 ),
               ],
             ),

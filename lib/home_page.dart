@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math';
 
 class HomePage extends StatelessWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -22,12 +23,16 @@ class HomePage extends StatelessWidget {
                   child: GestureDetector(
                     onTap: () {
                       print('Left Dice Tapped');
+                      print(Random().nextInt(6) + 1);
                     },
                     child: Image.asset(
                       'images/dice1.png',
                     ),
                   ),
                   flex: 2,
+                ),
+                SizedBox(
+                  width: 5,
                 ),
                 Expanded(
                   child: GestureDetector(
